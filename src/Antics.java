@@ -14,7 +14,7 @@ public class Antics {
 
         // Test isPalindrome method
         System.out.println("Is 'Abba' a palindrome? " + isPalindrome("Abba")); // should return true
-        System.out.println("Is 'Hello' a palindrome? " + isPalindrome("Hello")); // false
+        System.out.println("Is 'Hello' a palindrome? " + isPalindrome("Hello")); // should false
 
         // Test isAbecedarian method
         System.out.println("Is 'almost' an abecedarian? " + isAbecedarian("almost")); //should return true
