@@ -68,4 +68,39 @@ public class Antics {
         }
         return true;
     }
+
+        /**
+     * Checks if a given string is a pangram.
+     * @param str the input string
+     * @return true if the string is a pangram, otherwise false
+     */
+    public static boolean isPangram(String str) {
+        // Convert the string to lowercase to handle case-insensitivity
+        str = str.toLowerCase();
+
+        // Iterate over all lower case letters of the alphabet
+        for (char i = 'a'; i <= 'z'; i++) {
+            // If any letter is not found in the string, return false
+            if (str.indexOf(i) == -1) {
+                return false;
+            }
+        }
+        // If all letters are found, return true
+        return true;
+    }
+
+    /**
+     * Capitalize the first letter of a given string.
+     * @param str The input string.
+     * @return The input string with its first letter capitalized.
+     */
+    public static String capitalizeFirstLetter(String str) {
+        // Check if the string is empty
+        if (str.isEmpty()) {
+            return str;
+        }
+        // Capitalize the first letter and concatenate the rest of the string
+        return str.substring(0, 1).toUpperCase() + str.substring(1);
+    }
+
 }
