@@ -1,6 +1,6 @@
 /**
- *Description: Homework 7a
- * This program is designed to convert Yen to USD & USD to Yen.
+ *Description: Group Project 2
+ * This program is designed to
  *@author Michael Polk
  *@author Kwame Puryear
  *@since March 05 2025
@@ -9,15 +9,28 @@
 public class Antics {
 
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+
+        welcome();
 
         // Test isPalindrome method
-        System.out.println("Is 'Abba' a palindrome? " + isPalindrome("Abba")); // true
+        System.out.println("Is 'Abba' a palindrome? " + isPalindrome("Abba")); // should return true
         System.out.println("Is 'Hello' a palindrome? " + isPalindrome("Hello")); // false
 
         // Test isAbecedarian method
-        System.out.println("Is 'almost' an abecedarian? " + isAbecedarian("almost")); // true
-        System.out.println("Is 'apple' an abecedarian? " + isAbecedarian("apple")); // false
+        System.out.println("Is 'almost' an abecedarian? " + isAbecedarian("almost")); //should return true
+        System.out.println("Is 'apple' an abecedarian? " + isAbecedarian("apple")); //should return false
+    }
+
+    /**
+     * a welcome message explaining what the programs function is.
+     */
+    public static void welcome() {
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        System.out.println("Welcome to the Antics program!");
+        System.out.println("This program checks if a word is a palindrome or an abecedarian.");
+        System.out.println("Simply call the methods provided in the program.");
+        System.out.println("I hope you have fun using our program  & it fits your purposes!");
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     }
 
     /**
