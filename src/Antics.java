@@ -13,12 +13,21 @@ public class Antics {
         welcome();
 
         // Test isPalindrome method
-        System.out.println("Is 'Abba' a palindrome? " + isPalindrome("Abba")); // should return true
-        System.out.println("Is 'Hello' a palindrome? " + isPalindrome("Hello")); // false
+        System.out.println("Is 'Now, sir a war is won!' a palindrome? " + isPalindrome("Now, sir a war is won!")); // should return true
+        System.out.println("Is 'How about now?' a palindrome? " + isPalindrome("How about now?")); // false
 
         // Test isAbecedarian method
-        System.out.println("Is 'almost' an abecedarian? " + isAbecedarian("almost")); //should return true
-        System.out.println("Is 'apple' an abecedarian? " + isAbecedarian("apple")); //should return false
+        System.out.println("Is 'Ghost' an abecedarian? " + isAbecedarian("Ghost")); //should return true
+        System.out.println("Is 'durango' an abecedarian? " + isAbecedarian("durango")); //should return false
+
+        // Test isPangram method
+        System.out.println(isPangram("The quick brown fox jumps over the lazy dog"));  // true
+        System.out.println(isPangram("We do what we do"));  // false
+
+        // Test capitalizeFirstLetter method
+        System.out.println(capitalizeFirstLetter("michael Polk"));  // "Michael Polk"
+        System.out.println(capitalizeFirstLetter("kwame Puryear"));  // "Kwame Puryear"
+        System.out.println(capitalizeFirstLetter(""));  // ""
     }
 
     /**
@@ -27,7 +36,7 @@ public class Antics {
     public static void welcome() {
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("Welcome to the Antics program!");
-        System.out.println("This program checks if a word is a palindrome or an abecedarian.");
+        System.out.println("This program checks if a word is a palindrome or an abecedarian as well as isPangram or capitalizeFirstLetter.");
         System.out.println("Simply call the methods provided in the program.");
         System.out.println("I hope you have fun using our program  & it fits your purposes!");
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
@@ -67,5 +76,40 @@ public class Antics {
             }
         }
         return true;
+
+    }
+
+    /**
+     * Checks if a given string is a pangram.
+     * @param str the input string
+     * @return true if the string is a pangram, otherwise false
+     */
+    public static boolean isPangram(String str) {
+        // Convert the string to lowercase to handle case-insensitivity
+        str = str.toLowerCase();
+
+        // Iterate over all lower case letters of the alphabet
+        for (char i = 'a'; i <= 'z'; i++) {
+            // If any letter is not found in the string, return false
+            if (str.indexOf(i) == -1) {
+                return false;
+            }
+        }
+        // If all letters are found, return true
+        return true;
+    }
+
+    /**
+     * Capitalize the first letter of a given string.
+     * @param str The input string.
+     * @return The input string with its first letter capitalized.
+     */
+    public static String capitalizeFirstLetter(String str) {
+        // Check if the string is empty
+        if (str.isEmpty()) {
+            return str;
+        }
+        // Capitalize the first letter and concatenate the rest of the string
+        return str.substring(0, 1).toUpperCase() + str.substring(1);
     }
 }
