@@ -1,9 +1,9 @@
 /**
  *Description: Group Project 2
  * This program is designed to
- *@author Michael Polk
- *@author Kwame Puryear
- *@since March 05 2025
+ *@author Michael Polk (isPalindrome and isAbecederian)
+ *@author Kwame Puryear (isPangram and capitalizeFirstLetter)
+ *@since March 06 2025
  */
 
 public class Antics {
@@ -18,7 +18,7 @@ public class Antics {
 
         // Test isAbecedarian method
         System.out.println("Is 'Ghost' an abecedarian? " + isAbecedarian("Ghost")); //should return true
-        System.out.println("Is 'durango' an abecedarian? " + isAbecedarian("durango")); //should return false
+        System.out.println("Is 'Hero is the best' an abecedarian? " + isAbecedarian("Hero is the best")); //should return false
 
         // Test isPangram method
         System.out.println(isPangram("The quick brown fox jumps over the lazy dog"));  // true
