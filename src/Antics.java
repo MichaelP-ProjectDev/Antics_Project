@@ -1,6 +1,10 @@
 /**
- *Description: Group Project 2
- * This program is designed to
+ *Description: Group Project 2 - To test and anaylze text
+ * This program is designed to test:
+ * - whether a word or phrase is an Palindrome & isAbecederian
+ * - test if a sentence is a pangram
+ * - capitalizeFirstLetter - of a string
+ *
  *@author Michael Polk (isPalindrome and isAbecederian)
  *@author Kwame Puryear (isPangram and capitalizeFirstLetter)
  *@since March 06 2025
